@@ -1,0 +1,110 @@
+/* Body & Calculator Container */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #e0e5ec;
+    font-family: 'Poppins', sans-serif;
+}
+
+.calculator {
+    background: #e0e5ec;
+    padding: 25px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 25px #a3b1c6, -10px -10px 25px #ffffff;
+    animation: floatCalc 2s ease-in-out infinite alternate;
+}
+
+/* Display */
+#display {
+    width: 100%;
+    font-size: 2rem;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    margin-bottom: 25px;
+    text-align: right;
+    background: #f8f9fb;
+    box-shadow: inset 5px 5px 15px #a3b1c6, inset -5px -5px 15px #ffffff;
+    transition: all 0.2s ease;
+    overflow-x: auto;
+}
+
+/* Buttons Grid */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    grid-gap: 15px;
+}
+
+/* Buttons General Style */
+button {
+    width: 70px;
+    height: 70px;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.4rem;
+    box-shadow: 5px 5px 15px #a3b1c6, -5px -5px 15px #ffffff;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    background: #e0e5ec;
+    outline: none;
+}
+
+/* Hover & Press Effects */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 18px #a3b1c6, -6px -6px 18px #ffffff;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: inset 5px 5px 15px #a3b1c6, inset -5px -5px 15px #ffffff;
+}
+
+/* Special Buttons */
+.operator {
+    background: #22c55e;
+    color: white;
+}
+
+.operator:hover {
+    background: #16a34a;
+}
+
+.operator:active {
+    background: #16a34a;
+}
+
+.clear {
+    background: #ff6b6b;
+    color: white;
+}
+
+.clear:hover {
+    background: #fa5252;
+}
+
+.clear:active {
+    background: #fa5252;
+}
+
+.equal {
+    background: #3b82f6;
+    color: white;
+}
+
+.equal:hover {
+    background: #2563eb;
+}
+
+.equal:active {
+    background: #2563eb;
+}
+
+/* Floating animation for calculator */
+@keyframes floatCalc {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-5px); }
+}
